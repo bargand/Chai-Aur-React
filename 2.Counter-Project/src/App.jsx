@@ -12,7 +12,11 @@ function App() {
   }
 
   const addAge = () => {
-    setAge(age + 1);
+    // setAge(age + 1)    //when you try to change value with 1
+    setAge(prevAge => prevAge + 1);
+    setAge(prevAge => prevAge + 1);
+    setAge(prevAge => prevAge + 1);
+    //when you change value with 3 then we use prev and increase the value
   };
   const reduceAge = () => {
     setAge(age - 1);
